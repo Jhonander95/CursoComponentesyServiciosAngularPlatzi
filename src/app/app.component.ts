@@ -7,4 +7,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'my-store1';
+  imgParent = '';
+
+
+  onLoaded(img: string) {
+    console.log('Log padre ' + img);
+  }
+
+
+
 }
