@@ -1,5 +1,4 @@
 import { Component, Input, OnInit, Output, EventEmitter, OnChanges, AfterViewInit, OnDestroy, SimpleChanges } from '@angular/core';
-
 @Component({
   selector: 'app-img',
   templateUrl: './img.component.html',
@@ -15,8 +14,8 @@ export class ImgComponent implements OnInit, OnChanges, AfterViewInit, OnDestroy
   }
   @Output() loaded = new EventEmitter<string>();
   imgDefault: string = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThZeSJhq4dWlb0IHRZ4H_p0qcBqmVOgJZh7g&usqp=CAU'
-  counter = 0;
-  counterFn: number | undefined;
+/*   counter = 0;
+  counterFn: number | undefined; */
 
   constructor() {
     //befor render
@@ -28,11 +27,10 @@ export class ImgComponent implements OnInit, OnChanges, AfterViewInit, OnDestroy
     //before render
     //async - fetch - onece time
     console.log('ngOnInit', ' imageValue => ', this.img);
-
-    this.counterFn = window.setInterval(() => {
+/*     this.counterFn = window.setInterval(() => {
       this.counter++;
       console.log('Run Counter');
-    }, 1000);
+    }, 1000); */
   }
   ngOnChanges(changes: SimpleChanges) {
     //befor -- during render
@@ -45,7 +43,7 @@ export class ImgComponent implements OnInit, OnChanges, AfterViewInit, OnDestroy
   ngOnDestroy() {
     // delete
     console.log('ngOnDestroy', ' imageValue => ', this.img);
-    window.clearInterval(this.counterFn);
+   // window.clearInterval(this.counterFn);
   }
   ngAfterViewInit() {
     //after render
