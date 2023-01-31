@@ -13,7 +13,7 @@ export class ImgComponent implements OnInit, OnChanges, AfterViewInit, OnDestroy
 
   }
   @Output() loaded = new EventEmitter<string>();
-  imgDefault: string = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThZeSJhq4dWlb0IHRZ4H_p0qcBqmVOgJZh7g&usqp=CAU'
+  imgDefault: string = '../assets/images/default.png'
 /*   counter = 0;
   counterFn: number | undefined; */
 

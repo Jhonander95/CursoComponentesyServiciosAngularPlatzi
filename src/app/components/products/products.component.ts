@@ -11,19 +11,31 @@ export class ProductsComponent {
     {
       id: '1',
       name: 'Product 1',
-      image: './assets/default.png',
+      image: './assets/images/album.jpg',
       price: 11
     },
     {
       id: '2',
       name: 'Product 2',
-      image: './assets/default1.jpg',
+      image: './assets/images/bike.jpg',
       price: 11
     },
     {
       id: '3',
       name: 'Product 3',
-      image: './assets/descarga.jfif',
+      image: './assets/images/books.jpg',
+      price: 11
+    },
+    {
+      id: '3',
+      name: 'Product 3',
+      image: './assets/images/glasses.jpg',
+      price: 11
+    },
+    {
+      id: '3',
+      name: 'Product 3',
+      image: './assets/images/house.jpg',
       price: 11
     }
   ];

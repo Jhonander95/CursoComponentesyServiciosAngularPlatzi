@@ -7,13 +7,15 @@ import { ImgComponent } from './components/img/img.component';
 import { ProductComponent } from './components/product/product.component';
 import { FormsModule } from '@angular/forms';
 import { ProductsComponent } from './components/products/products.component';
+import { NavComponent } from './components/nav/nav.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ImgComponent,
     ProductComponent,
-    ProductsComponent
+    ProductsComponent,
+    NavComponent
   ],
   imports: [
     BrowserModule,
