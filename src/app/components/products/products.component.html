@@ -4,6 +4,15 @@
 <p>
   Total: {{total}}
 </p>
+<p>
+  Today: {{ today | date}}
+</p>
+<p>
+  Date: {{ date | date}}
+</p>
+<p>
+  {{'hOlAA JJAaa YeaHH' | uppercase}}
+</p>
 <div class="products--grid">
   <app-product [product]="product" *ngFor="let product of products" (addedProduct)="onAddToShoppingCart($event)">
   </app-product>
