@@ -6,7 +6,7 @@ import { BehaviorSubject } from 'rxjs';
 })
 export class StoreService {
 
-  constructor() { }
+  //constructor() { }
 
   total = 0;
 
