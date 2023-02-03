@@ -4,9 +4,15 @@
   </app-product>
 </div>
 <div class="product-detail" [class.active]="showProductDetail" >
-  <div>
+  <div *ngIf="productChosen" >
     <button (click)="toggleProductDetail()">Close</button>
-    contenido
+    <h1>{{ productChosen.title }}</h1>
+    <owl-carousel-o >
+      <ng-template carouselSlide *ngFor="let img of productChosen.images" >
+        <img [src]="img" alt="">
+      </ng-template>
+    </owl-carousel-o>
+    <p>{{productChosen.description}}</p>
   </div>
 </div>
 
