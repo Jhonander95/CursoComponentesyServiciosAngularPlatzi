@@ -13,3 +13,10 @@ export interface Category {
   id: string;
   name: string;
 }
+export interface UpdateProductDTO extends Partial<CreateProductDTO> {
+ /*  title?: string;
+  price?: number;
+  images?: string[];
+  description?: string;
+  category?: Category; */
+}

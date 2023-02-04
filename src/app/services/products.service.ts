@@ -22,4 +22,7 @@ export class ProductsService {
   create(dto: CreateProductDTO) {
     return this.http.post<Product>(this.apiUrl, dto );
   }
+  update(id: string, dto: any) {
+    return this.http.put<Product>(`${this.apiUrl}/${id}`, dto );
+  }
 }
