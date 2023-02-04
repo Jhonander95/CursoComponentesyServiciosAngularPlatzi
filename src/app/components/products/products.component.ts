@@ -9,6 +9,25 @@ import { ProductsService } from '../../services/products.service';
   styleUrls: ['./products.component.scss']
 })
 export class ProductsComponent implements OnInit {
+
+  customOptions: any = {
+    loop: true,
+    mouseDrag: false,
+    touchDrag: false,
+    pullDrag: false,
+    dots: false,
+    navSpeed: 700,
+    navText: ['', ''],
+    responsive: {
+      0: {
+        items: 1
+      }
+    },
+    nav: true,
+    autoplay: true,
+    autoplayTimeout: 3000
+  }
+
   total = 0;
   myShoppingCart: Product[] = [];
   products: Product[] = [];
