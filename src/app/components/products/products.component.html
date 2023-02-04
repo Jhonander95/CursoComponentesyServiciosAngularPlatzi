@@ -1,3 +1,4 @@
+<button (click)="createNewProduct()" >Crear Producto</button>
 <button (click)="toggleProductDetail()" >Click</button>
 <div class="products--grid">
   <app-product [product]="product" *ngFor="let product of products" (addedProduct)="onAddToShoppingCart($event)" (showProduct)="onShowDetail($event)">
@@ -13,7 +14,6 @@
           <img [src]="img" >
         </ng-template>
       </ng-container>
-
     </owl-carousel-o>
     <!-- <owl-carousel-o >
       <ng-template carouselSlide *ngFor="let img of productChosen.images" >
