@@ -29,6 +29,9 @@ export class ProductsComponent implements OnInit {
     autoplayTimeout: 3000
   }
 
+  limit = 10;
+  offSet = 0;
+
   total = 0;
   myShoppingCart: Product[] = [];
   products: Product[] = [];
@@ -54,7 +57,7 @@ export class ProductsComponent implements OnInit {
       this.myShoppingCart = this.storeServices.getShoppingCart();
      }
   ngOnInit() {
-    this.productsService.getAllProducts()
+    this.productsService.getProductsByPage(10, 0)
     .subscribe(data => {
       this.products = data;
     });
@@ -119,6 +122,14 @@ export class ProductsComponent implements OnInit {
       this.showProductDetail = false;
     })
    }
+
+  loadMore() {
+    this.productsService.getProductsByPage(this.limit, this.offSet)
+    .subscribe(data => {
+      this.products = this.products.concat(data);
+      this.offSet += this.limit;
+    })
+  }
 
 
 }
